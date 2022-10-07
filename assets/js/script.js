@@ -44,7 +44,7 @@ $(document).ready(function() {
         ("");
     }
     if (localStorage["save-twelve"] !== undefined) { //12 pm
-        var eventTwelve = $("<p>" + localStorage["save-nine"] + "</p>");
+        var eventTwelve = $("<p>" + localStorage["save-twelve"] + "</p>");
         $("#event-twelve").append(eventTwelve[0].innerText);
     } else {
         ("");
