@@ -15,3 +15,8 @@ $.each(timeBlock, function() {
     }
 });
 
+$(".saveBtn").on("click", function(event) {
+    var calendarEvent = event.target.parentElement.previousElementSibling.children[0].value; //saves value of save button's owned calendar event
+    localStorage.setItem(event.target.attributes[0].value, calendarEvent); //stores calendar event into local storage 
+    console.log(calendarEvent); //checks saved event item
+});
