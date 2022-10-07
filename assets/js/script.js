@@ -17,6 +17,16 @@ $.each(timeBlock, function() {
 
 $(".saveBtn").on("click", function(event) {
     var calendarEvent = event.target.parentElement.previousElementSibling.children[0].value; //saves value of save button's owned calendar event
-    localStorage.setItem(event.target.attributes[0].value, calendarEvent); //stores calendar event into local storage 
+    localStorage.setItem(event.target.attributes[1].value, calendarEvent); //stores calendar event into local storage 
     console.log(calendarEvent); //checks saved event item
 });
+
+$(document).ready(function() {
+    if (localStorage["save-nine"] !== undefined && localStorage["save-nine"] !== null) {
+        var eventNine = $("<p>" + localStorage["save-nine"] + "</p>");
+        $("#event-nine").append(eventNine[0].innerText);
+    } else {
+        ("");
+    }
+});
+
